@@ -19,6 +19,17 @@ const multiply = document.querySelector("#multiply");
 const divide = document.querySelector("#divide");
 const buttons = document.querySelectorAll("button");
 
+let sum = [];
+let operator = [];
+
+addition.addEventListener("click", () => {
+    sum = `${output1.innerHTML}`;
+    output2.innerHTML = `${output1.innerHTML}`;
+    output1.innerHTML = "+";
+    operator.push("+");
+});
+
+
 clearButton.addEventListener("click", () => {
     output1.innerHTML = 0;
     output2.innerHTML = 0;

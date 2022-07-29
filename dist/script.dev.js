@@ -20,6 +20,14 @@ var subtraction = document.querySelector("#subtract");
 var multiply = document.querySelector("#multiply");
 var divide = document.querySelector("#divide");
 var buttons = document.querySelectorAll("button");
+var sum = [];
+var operator = [];
+addition.addEventListener("click", function () {
+  sum = "".concat(output1.innerHTML);
+  output2.innerHTML = "".concat(output1.innerHTML);
+  output1.innerHTML = "+";
+  operator.push("+");
+});
 clearButton.addEventListener("click", function () {
   output1.innerHTML = 0;
   output2.innerHTML = 0;
