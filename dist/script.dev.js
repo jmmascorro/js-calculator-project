@@ -20,8 +20,12 @@ var subtraction = document.querySelector("#subtract");
 var multiply = document.querySelector("#multiply");
 var divide = document.querySelector("#divide");
 var buttons = document.querySelectorAll("button");
+clearButton.addEventListener("click", function () {
+  output1.innerHTML = 0;
+  output2.innerHTML = 0;
+  firstOut = "";
+});
 var firstOut = "";
-var secondOut = "";
 nine.addEventListener("click", function () {
   output1.innerHTML = 9;
   var num = output1.innerHTML;

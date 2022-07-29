@@ -19,14 +19,19 @@ const multiply = document.querySelector("#multiply");
 const divide = document.querySelector("#divide");
 const buttons = document.querySelectorAll("button");
 
+clearButton.addEventListener("click", () => {
+    output1.innerHTML = 0;
+    output2.innerHTML = 0;
+    firstOut = "";
+});
+
 let firstOut = "";
-let secondOut = "";
 
 nine.addEventListener("click", () => {
     output1.innerHTML = 9;
     let num = output1.innerHTML;
     if(nine.classList.contains("number")) {
-        firstOut += num;
+        firstOut += num; 
         output1.innerHTML = firstOut;
     }
 
