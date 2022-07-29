@@ -38,6 +38,13 @@ addition.addEventListener("click", () => {
     operator.push("+");
 });
 
+subtraction.addEventListener("click", () => {
+    sum = `${output1.innerHTML}`;
+    output2.innerHTML = `${output1.innerHTML}`;
+    output1.innerHTML = "-";
+    operator.push("-");
+});
+
 
 clearButton.addEventListener("click", () => {
     output1.innerHTML = "";
@@ -45,6 +52,7 @@ clearButton.addEventListener("click", () => {
     sum = [];
     operator = [];
 });
+
 
 /*
 let firstOut = "";

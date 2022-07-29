@@ -34,6 +34,12 @@ addition.addEventListener("click", function () {
   output1.innerHTML = "+";
   operator.push("+");
 });
+subtraction.addEventListener("click", function () {
+  sum = "".concat(output1.innerHTML);
+  output2.innerHTML = "".concat(output1.innerHTML);
+  output1.innerHTML = "-";
+  operator.push("-");
+});
 clearButton.addEventListener("click", function () {
   output1.innerHTML = "";
   output2.innerHTML = "";
