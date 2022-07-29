@@ -1,23 +1,32 @@
 const equalButton = document.querySelector("#equals");
-const decimalButton = document.querySelector("#decimal");
 const clearButton = document.querySelector("#clear");
 const output1 = document.querySelector(".output1");
 const output2 = document.querySelector(".output2");
-const nine = document.querySelector("#nine");
-const eight = document.querySelector("#eight");
-const seven = document.querySelector("#seven");
-const six = document.querySelector("#six");
-const five = document.querySelector("#five");
-const four = document.querySelector("#four");
-const three = document.querySelector("#three");
-const two = document.querySelector("#two");
-const one = document.querySelector("#one");
-const zero = document.querySelector("#zero");
 const addition = document.querySelector("#add");
 const subtraction = document.querySelector("#subtract");
 const multiply = document.querySelector("#multiply");
 const divide = document.querySelector("#divide");
-const buttons = document.querySelectorAll("button");
+
+const buttonsContainer = document.querySelector(".input_buttons");
+
+const nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, '.']
+
+const generateButtons = () => {
+    nums.forEach(num => {
+        const newButton = document.createElement('button');
+        newButton.innerHTML = num;
+        buttonsContainer.appendChild(newButton);
+        newButton.classList.add("number");
+        newButton.addEventListener("click", () => {
+            if(newButton.classList == "number") {
+                output1.innerHTML += num
+            }
+        })
+    });
+}
+
+generateButtons();
+
 
 let sum = [];
 let operator = [];
@@ -31,21 +40,22 @@ addition.addEventListener("click", () => {
 
 
 clearButton.addEventListener("click", () => {
-    output1.innerHTML = 0;
-    output2.innerHTML = 0;
-    firstOut = "";
+    output1.innerHTML = "";
+    output2.innerHTML = "";
+    sum = [];
+    operator = [];
 });
 
+/*
 let firstOut = "";
 
 nine.addEventListener("click", () => {
     output1.innerHTML = 9;
     let num = output1.innerHTML;
-    if(nine.classList.contains("number")) {
+    if(output1.innerHTML == 9) {
         firstOut += num; 
         output1.innerHTML = firstOut;
     }
-
 });
 
 eight.addEventListener("click", () => {
@@ -130,7 +140,7 @@ zero.addEventListener("click", () => {
 });
 
 
-
+*/
 
 
 

@@ -1,6 +1,6 @@
 .input_buttons {
   display: grid;
-  grid-template-columns: 2fr 2fr 2fr 2fr;
+  grid-template-columns: repeat(4, 1fr);
   height: 100%;
   width: 100%;
   align-items: center;
