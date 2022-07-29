@@ -19,8 +19,99 @@ const multiply = document.querySelector("#multiply");
 const divide = document.querySelector("#divide");
 const buttons = document.querySelectorAll("button");
 
+let firstOut = "";
+let secondOut = "";
 
+nine.addEventListener("click", () => {
+    output1.innerHTML = 9;
+    let num = output1.innerHTML;
+    if(nine.classList.contains("number")) {
+        firstOut += num;
+        output1.innerHTML = firstOut;
+    }
 
+});
+
+eight.addEventListener("click", () => {
+    output1.innerHTML = 8;
+    let num = output1.innerHTML;
+    if(eight.classList.contains("number")) {
+        firstOut += num;
+        output1.innerHTML = firstOut;
+    }
+});
+
+seven.addEventListener("click", () => {
+    output1.innerHTML = 7;
+    let num = output1.innerHTML;
+    if(seven.classList.contains("number")) {
+        firstOut += num;
+        output1.innerHTML = firstOut;
+    }
+});
+
+six.addEventListener("click", () => {
+    output1.innerHTML = 6;
+    let num = output1.innerHTML;
+    if(six.classList.contains("number")) {
+        firstOut += num;
+        output1.innerHTML = firstOut;
+    }
+});
+
+five.addEventListener("click", () => {
+    output1.innerHTML = 5;
+    let num = output1.innerHTML;
+    if(five.classList.contains("number")) {
+        firstOut += num;
+        output1.innerHTML = firstOut;
+    }
+});
+
+four.addEventListener("click", () => {
+    output1.innerHTML = 4;
+    let num = output1.innerHTML;
+    if(four.classList.contains("number")) {
+        firstOut += num;
+        output1.innerHTML = firstOut;
+    }
+});
+
+three.addEventListener("click", () => {
+    output1.innerHTML = 3;
+    let num = output1.innerHTML;
+    if(three.classList.contains("number")) {
+        firstOut += num;
+        output1.innerHTML = firstOut;
+    }
+});
+
+two.addEventListener("click", () => {
+    output1.innerHTML = 2;
+    let num = output1.innerHTML;
+    if(two.classList.contains("number")) {
+        firstOut += num;
+        output1.innerHTML = firstOut;
+    }
+});
+
+one.addEventListener("click", () => {
+    output1.innerHTML = 1;
+    let num = output1.innerHTML;
+    if(one.classList.contains("number")) {
+        firstOut += num;
+        output1.innerHTML = firstOut;
+    }
+});
+
+zero.addEventListener("click", () => {
+    output1.innerHTML = 0;
+    let num = output1.innerHTML;
+    if(zero.classList.contains("number")) {
+        firstOut += num;
+        output1.innerHTML = firstOut;
+    } 
+});
 
 
 
