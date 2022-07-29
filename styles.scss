@@ -1,13 +1,23 @@
+@use 'input';
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
 .calc_grid {
-    width: 75%;
+    width: 40%;
     height: 60%;
-    display : grid;
     justify-content: center;
     border: 2px solid black;
 }
 
-.output {
-    width: 100%;
-    height: 20%;
-    border: 2px solid black;
+main {
+    .output_screen {
+        width: 100%;
+        height: 30%;
+        border: 2px solid black;
+    }
 }
+
+

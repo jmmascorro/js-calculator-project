@@ -1,0 +1,15 @@
+.input_buttons {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    padding: 5px;
+}
+
+button {
+    width:40px;
+    height: 30px;
+}
+
+

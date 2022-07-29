@@ -1,2 +1,22 @@
-// 
 "use strict";
+
+var equalButton = document.querySelector("#equals");
+var decimalButton = document.querySelector("#decimal");
+var clearButton = document.querySelector("#clear");
+var output1 = document.querySelector(".output1");
+var output2 = document.querySelector(".output2");
+var nine = document.querySelector("#nine");
+var eight = document.querySelector("#eight");
+var seven = document.querySelector("#seven");
+var six = document.querySelector("#six");
+var five = document.querySelector("#five");
+var four = document.querySelector("#four");
+var three = document.querySelector("#three");
+var two = document.querySelector("#two");
+var one = document.querySelector("#one");
+var zero = document.querySelector("#zero");
+var addition = document.querySelector("#add");
+var subtraction = document.querySelector("#subtract");
+var multiply = document.querySelector("#multiply");
+var divide = document.querySelector("#divide");
+var buttons = document.querySelectorAll("button");
