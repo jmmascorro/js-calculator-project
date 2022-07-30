@@ -29,15 +29,19 @@ var generateButtons = function generateButtons() {
 generateButtons();
 var operator = [];
 addition.addEventListener("click", function () {
-  output2.innerHTML = "".concat(output1.innerHTML);
-  output3.innerHTML = "+";
+  output2.innerHTML = "+" + output1.innerHTML;
   output1.innerHTML = "";
   operator.push("+");
 });
 subtraction.addEventListener("click", function () {
-  output2.innerHTML = "".concat(output1.innerHTML);
-  output1.innerHTML = "-";
+  output2.innerHTML = "-" + output1.innerHTML;
+  output1.innerHTML = "";
   operator.push("-");
+});
+multiply.addEventListener("click", function () {
+  output2.innerHTML = "x" + output1.innerHTML;
+  output1.innerHTML = "";
+  operator.push("*");
 });
 clearButton.addEventListener("click", function () {
   output1.innerHTML = "";
@@ -47,6 +51,8 @@ clearButton.addEventListener("click", function () {
 });
 equalButton.addEventListener("click", function () {
   if (operator[0] = "+") {
+    output3.innerHTML = parseFloat(output1.innerHTML) + parseFloat(output2.innerHTML);
+  } else if (operator[0] = "-") {
     output3.innerHTML = parseFloat(output1.innerHTML) + parseFloat(output2.innerHTML);
   }
 });

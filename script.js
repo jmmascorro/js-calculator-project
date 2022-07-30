@@ -32,16 +32,21 @@ generateButtons();
 let operator = [];
 
 addition.addEventListener("click", () => {
-    output2.innerHTML = `${output1.innerHTML}`;
-    output3.innerHTML = "+";
+    output2.innerHTML = "+" + output1.innerHTML ;
     output1.innerHTML = "";
     operator.push("+");
 });
 
 subtraction.addEventListener("click", () => {
-    output2.innerHTML = `${output1.innerHTML}`;
-    output1.innerHTML = "-";
+    output2.innerHTML = "-" + output1.innerHTML;
+    output1.innerHTML = "";
     operator.push("-");
+});
+
+multiply.addEventListener("click", () => {
+    output2.innerHTML = "x" + output1.innerHTML ;
+    output1.innerHTML = "";
+    operator.push("*");
 });
 
 
@@ -55,6 +60,8 @@ clearButton.addEventListener("click", () => {
 
 equalButton.addEventListener ("click", () => {
     if(operator[0] = "+"){
+        output3.innerHTML = parseFloat(output1.innerHTML) + parseFloat(output2.innerHTML);
+    }else if(operator[0] = "-"){
         output3.innerHTML = parseFloat(output1.innerHTML) + parseFloat(output2.innerHTML);
     }
 })
