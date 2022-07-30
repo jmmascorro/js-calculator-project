@@ -1,0 +1,17 @@
+main .output_screen {
+  text-align: right;
+  overflow-wrap: break-word;
+  width: 23vw;
+  height: 30vh;
+  background-color: #232121;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+main .output_screen h1 {
+  color: white;
+  padding-right: 15px;
+}
+main .output_screen h2 {
+  color: white;
+  padding-right: 15px;
+}

@@ -10,7 +10,7 @@ const divide = document.querySelector("#divide");
 
 const buttonsContainer = document.querySelector(".input_buttons");
 
-const nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, '.']
+const nums = [6, 7, 8, 9, 2, 3, 4, 5, 1, 0, '.', "π"];
 
 const generateButtons = () => {
     nums.forEach(num => {
@@ -20,7 +20,7 @@ const generateButtons = () => {
         newButton.classList.add("number");
         newButton.addEventListener("click", () => {
             if(newButton.classList == "number") {
-                output2.innerHTML += num
+                output2.innerHTML += num;
             }
         })
     });

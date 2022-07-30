@@ -1,23 +1,190 @@
 @use 'input';
+@use 'outputscreen';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
 
 body {
+    background-color: grey;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
+    padding-top: 30px;
+    
 }
 
 .calc_grid {
-    width: 40%;
-    height: 60%;
-    justify-content: center;
-    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 25vw;
+    height: 85vh;
+    border: 2px solid grey;
+    background-color: black;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 10px 10px black;
 }
 
-main {
-    .output_screen {
-        width: 35vw;
-        height: 30vh;
-        border: 2px solid black;
+@media screen and (max-width: 1030px) {
+
+    .calc_grid {
+        width: 30%;
+    }
+
+    main {
+
+        .output_screen {
+           width: 26vw;
+       }
+    }
+
+    .input_buttons {
+        width: 26vw;
+        height: 50vh;
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .calc_grid {
+        width: 30%;
+    }
+
+    main {
+
+        .output_screen {
+           width: 26vw;
+       }
+    }
+
+    .input_buttons {
+        width: 26vw;
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .calc_grid {
+        width: 35%;
+    }
+
+    main {
+
+        .output_screen {
+           width: 30vw;
+       }
+    }
+
+    .input_buttons {
+        width: 30vw;
+        height: 50vh;
+    }
+}
+@media screen and (max-width: 800px) {
+    .calc_grid {
+        width: 40%;
+    }
+
+    main {
+
+        .output_screen {
+           width: 35vw;
+       }
+    }
+
+    .input_buttons {
+        width: 35vw;
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .calc_grid {
+        width: 45%;
+    }
+
+    main {
+
+        .output_screen {
+           width: 40vw;
+       }
+    }
+
+    .input_buttons {
+        width: 40vw;
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .calc_grid {
+        width: 55%;
+    }
+
+    main {
+
+        .output_screen {
+           width: 50vw;
+       }
+    }
+
+    .input_buttons {
+        width: 50vw;
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .calc_grid {
+        width: 60%;
+    }
+
+    main {
+
+        .output_screen {
+           width: 55vw;
+       }
+    }
+
+    .input_buttons {
+        width: 55vw;
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    
+    
+    .calc_grid {
+        width: 90%;
+    }
+
+   main {
+
+     .output_screen {
+        width: 70vw;
+    }
+
+    .input_buttons {
+        width: 75vw;
+        height: 50vh;
+        grid-auto-rows: 80px; 
+    }
+    }
+
+    .calc_grid {
+        button {
+            width: 90%;
+            height: 90%;
+        }
+}
+}
+ 
+
+
 
 

@@ -10,7 +10,7 @@ var subtraction = document.querySelector("#subtract");
 var multiply = document.querySelector("#multiply");
 var divide = document.querySelector("#divide");
 var buttonsContainer = document.querySelector(".input_buttons");
-var nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, '.'];
+var nums = [6, 7, 8, 9, 2, 3, 4, 5, 1, 0, '.', "π"];
 
 var generateButtons = function generateButtons() {
   nums.forEach(function (num) {
