@@ -20,40 +20,55 @@ var generateButtons = function generateButtons() {
     newButton.classList.add("number");
     newButton.addEventListener("click", function () {
       if (newButton.classList == "number") {
-        output1.innerHTML += num;
+        output2.innerHTML += num;
       }
     });
   });
 };
 
 generateButtons();
-var operator = [];
+var operator = "";
 addition.addEventListener("click", function () {
-  output2.innerHTML = "+" + output1.innerHTML;
-  output1.innerHTML = "";
-  operator.push("+");
+  output1.innerHTML = output2.innerHTML;
+  output2.innerHTML = "+";
+  operator = "+";
 });
 subtraction.addEventListener("click", function () {
-  output2.innerHTML = "-" + output1.innerHTML;
-  output1.innerHTML = "";
-  operator.push("-");
+  output1.innerHTML = output2.innerHTML;
+  output2.innerHTML = "-";
+  operator = "-";
 });
 multiply.addEventListener("click", function () {
-  output2.innerHTML = "x" + output1.innerHTML;
-  output1.innerHTML = "";
-  operator.push("*");
+  output1.innerHTML = output2.innerHTML;
+  output2.innerHTML = "*";
+  operator = "*";
+});
+divide.addEventListener("click", function () {
+  output1.innerHTML = output2.innerHTML;
+  output2.innerHTML = "÷";
+  operator = "/";
 });
 clearButton.addEventListener("click", function () {
   output1.innerHTML = "";
   output2.innerHTML = "";
   output3.innerHTML = "";
-  operator = [];
+  operator = "";
 });
 equalButton.addEventListener("click", function () {
-  if (operator[0] = "+") {
+  if (operator == "+") {
     output3.innerHTML = parseFloat(output1.innerHTML) + parseFloat(output2.innerHTML);
-  } else if (operator[0] = "-") {
-    output3.innerHTML = parseFloat(output1.innerHTML) + parseFloat(output2.innerHTML);
+  } else if (operator == "-") {
+    output2.innerHTML = output2.innerHTML.substring(1);
+    output3.innerHTML = parseFloat(output1.innerHTML) - parseFloat(output2.innerHTML);
+    output2.innerHTML = "-" + output2.innerHTML;
+  } else if (operator == "*") {
+    output2.innerHTML = output2.innerHTML.substring(1);
+    output3.innerHTML = parseFloat(output1.innerHTML) * parseFloat(output2.innerHTML);
+    output2.innerHTML = "*" + output2.innerHTML;
+  } else if (operator == "/") {
+    output2.innerHTML = output2.innerHTML.substring(1);
+    output3.innerHTML = parseFloat(output1.innerHTML) / parseFloat(output2.innerHTML);
+    output2.innerHTML = "÷" + output2.innerHTML;
   }
 });
 /*
