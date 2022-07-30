@@ -2,6 +2,7 @@ const equalButton = document.querySelector("#equals");
 const clearButton = document.querySelector("#clear");
 const output1 = document.querySelector(".output1");
 const output2 = document.querySelector(".output2");
+const output3 = document.querySelector(".output3");
 const addition = document.querySelector("#add");
 const subtraction = document.querySelector("#subtract");
 const multiply = document.querySelector("#multiply");
@@ -28,30 +29,36 @@ const generateButtons = () => {
 generateButtons();
 
 
-let sum = [];
 let operator = [];
 
 addition.addEventListener("click", () => {
-    sum = `${output1.innerHTML}`;
     output2.innerHTML = `${output1.innerHTML}`;
-    output1.innerHTML = "+";
+    output3.innerHTML = "+";
+    output1.innerHTML = "";
     operator.push("+");
 });
 
 subtraction.addEventListener("click", () => {
-    sum = `${output1.innerHTML}`;
     output2.innerHTML = `${output1.innerHTML}`;
     output1.innerHTML = "-";
     operator.push("-");
 });
 
 
+
 clearButton.addEventListener("click", () => {
     output1.innerHTML = "";
     output2.innerHTML = "";
-    sum = [];
+    output3.innerHTML = "";
     operator = [];
 });
+
+equalButton.addEventListener ("click", () => {
+    if(operator[0] = "+"){
+        output3.innerHTML = parseFloat(output1.innerHTML) + parseFloat(output2.innerHTML);
+    }
+})
+
 
 
 /*

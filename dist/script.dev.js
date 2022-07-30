@@ -4,6 +4,7 @@ var equalButton = document.querySelector("#equals");
 var clearButton = document.querySelector("#clear");
 var output1 = document.querySelector(".output1");
 var output2 = document.querySelector(".output2");
+var output3 = document.querySelector(".output3");
 var addition = document.querySelector("#add");
 var subtraction = document.querySelector("#subtract");
 var multiply = document.querySelector("#multiply");
@@ -26,16 +27,14 @@ var generateButtons = function generateButtons() {
 };
 
 generateButtons();
-var sum = [];
 var operator = [];
 addition.addEventListener("click", function () {
-  sum = "".concat(output1.innerHTML);
   output2.innerHTML = "".concat(output1.innerHTML);
-  output1.innerHTML = "+";
+  output3.innerHTML = "+";
+  output1.innerHTML = "";
   operator.push("+");
 });
 subtraction.addEventListener("click", function () {
-  sum = "".concat(output1.innerHTML);
   output2.innerHTML = "".concat(output1.innerHTML);
   output1.innerHTML = "-";
   operator.push("-");
@@ -43,8 +42,13 @@ subtraction.addEventListener("click", function () {
 clearButton.addEventListener("click", function () {
   output1.innerHTML = "";
   output2.innerHTML = "";
-  sum = [];
+  output3.innerHTML = "";
   operator = [];
+});
+equalButton.addEventListener("click", function () {
+  if (operator[0] = "+") {
+    output3.innerHTML = parseFloat(output1.innerHTML) + parseFloat(output2.innerHTML);
+  }
 });
 /*
 let firstOut = "";
