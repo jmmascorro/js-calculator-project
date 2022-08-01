@@ -18,11 +18,9 @@ var generateButtons = function generateButtons() {
     var newButton = document.createElement('button');
     newButton.innerHTML = num;
     buttonsContainer.appendChild(newButton);
-    newButton.classList.add("number");
     newButton.addEventListener("click", function () {
-      if (newButton.classList == "number") {
-        output2.innerHTML += num;
-      }
+      output2.innerHTML += num;
+      outputScreen.style.backgroundColor = "rgb(154, 149, 149)";
     });
   });
 };
@@ -54,24 +52,25 @@ clearButton.addEventListener("click", function () {
   output2.innerHTML = "";
   output3.innerHTML = "";
   operator = "";
+  outputScreen.style.backgroundColor = "rgb(55, 53, 53)";
 });
 equalButton.addEventListener("click", function () {
   if (operator == "+") {
     output2.innerHTML = output2.innerHTML.substring(1);
-    output3.innerHTML = "=" + (parseFloat(output1.innerHTML) + parseFloat(output2.innerHTML));
-    output2.innerHTML = "+" + output2.innerHTML;
+    output3.innerHTML = "".concat(output1.innerHTML, " + ").concat(output2.innerHTML) + " " + "=" + " " + (parseFloat(output1.innerHTML) + parseFloat(output2.innerHTML));
+    output2.innerHTML = "";
   } else if (operator == "-") {
     output2.innerHTML = output2.innerHTML.substring(1);
-    output3.innerHTML = "=" + (parseFloat(output1.innerHTML) - parseFloat(output2.innerHTML));
-    output2.innerHTML = "-" + output2.innerHTML;
+    output3.innerHTML = "".concat(output1.innerHTML, " - ").concat(output2.innerHTML) + " " + "=" + " " + (parseFloat(output1.innerHTML) - parseFloat(output2.innerHTML));
+    output2.innerHTML = "";
   } else if (operator == "*") {
     output2.innerHTML = output2.innerHTML.substring(1);
-    output3.innerHTML = "=" + parseFloat(output1.innerHTML) * parseFloat(output2.innerHTML);
-    output2.innerHTML = "*" + output2.innerHTML;
+    output3.innerHTML = "".concat(output1.innerHTML, " * ").concat(output2.innerHTML) + " " + "=" + " " + parseFloat(output1.innerHTML) * parseFloat(output2.innerHTML);
+    output2.innerHTML = "";
   } else if (operator == "/") {
     output2.innerHTML = output2.innerHTML.substring(1);
-    output3.innerHTML = "=" + parseFloat(output1.innerHTML) / parseFloat(output2.innerHTML);
-    output2.innerHTML = "÷" + output2.innerHTML;
+    output3.innerHTML = "".concat(output1.innerHTML, " \xF7 ").concat(output2.innerHTML) + " " + "=" + " " + parseFloat(output1.innerHTML) / parseFloat(output2.innerHTML);
+    output2.innerHTML = "";
   }
 });
 /*

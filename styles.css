@@ -2,16 +2,18 @@
 .input_buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 60px;
+  grid-auto-rows: 80px;
   align-items: center;
   align-content: center;
   justify-items: center;
   background-color: #d5d5d5;
   border-radius: 10px;
   width: 23vw;
+  height: 50vh;
 }
 
 .calc_grid button {
+  font-family: "Roboto", "sans-serif";
   width: 75%;
   height: 75%;
   border-radius: 10px;
@@ -47,14 +49,19 @@ main .output_screen {
   border: 2px solid black;
 }
 main .output_screen h1 {
-  color: white;
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 10px #0fa;
   padding-right: 15px;
   overflow-wrap: break-word;
-  font-size: 30px;
+  font-size: 43px;
+  font-weight: bold;
   margin-top: 15px;
 }
 main .output_screen h2 {
-  color: white;
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 10px #0fa;
+  font-weight: bold;
+  font-size: 30px;
   padding-right: 15px;
   margin-bottom: 15px;
 }
@@ -89,6 +96,18 @@ body {
   box-shadow: 0 10px 10px black;
 }
 
+@media screen and (max-width: 1350px) {
+  .input_buttons {
+    grid-auto-rows: 60px;
+  }
+
+  main .output_screen h1 {
+    font-size: 30px;
+  }
+  main .output_screen h2 {
+    font-size: 23px;
+  }
+}
 @media screen and (max-width: 1030px) {
   .calc_grid {
     width: 30%;

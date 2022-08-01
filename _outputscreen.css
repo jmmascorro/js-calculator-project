@@ -8,14 +8,19 @@ main .output_screen {
   border: 2px solid black;
 }
 main .output_screen h1 {
-  color: white;
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 10px #0fa;
   padding-right: 15px;
   overflow-wrap: break-word;
-  font-size: 30px;
+  font-size: 43px;
+  font-weight: bold;
   margin-top: 15px;
 }
 main .output_screen h2 {
-  color: white;
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 10px #0fa;
+  font-weight: bold;
+  font-size: 30px;
   padding-right: 15px;
   margin-bottom: 15px;
 }

@@ -33,6 +33,29 @@ body {
     box-shadow: 0 10px 10px black;
 }
 
+
+@media screen and (max-width: 1350px) {
+
+    .input_buttons {
+        grid-auto-rows: 60px;
+    }
+
+    main {
+        .output_screen {
+
+            h1 {
+                font-size: 30px;
+            }
+
+            h2 {
+                font-size: 23px;
+            }
+
+        }
+    }
+}
+
+
 @media screen and (max-width: 1030px) {
 
     .calc_grid {
@@ -52,6 +75,8 @@ body {
     }
 }
 
+
+
 @media screen and (max-width: 1000px) {
     .calc_grid {
         width: 30%;
@@ -70,6 +95,8 @@ body {
     }
 }
 
+
+
 @media screen and (max-width: 920px) {
     .calc_grid {
         width: 35%;
@@ -87,6 +114,8 @@ body {
         height: 50vh;
     }
 }
+
+
 @media screen and (max-width: 800px) {
     .calc_grid {
         width: 40%;
@@ -104,6 +133,8 @@ body {
         height: 50vh;
     }
 }
+
+
 
 @media screen and (max-width: 768px) {
     .calc_grid {
@@ -123,6 +154,8 @@ body {
     }
 }
 
+
+
 @media screen and (max-width: 620px) {
     .calc_grid {
         width: 55%;
@@ -140,6 +173,7 @@ body {
         height: 50vh;
     }
 }
+
 
 @media screen and (max-width: 520px) {
     .calc_grid {
@@ -185,6 +219,7 @@ body {
             height: 90%;
         }
 }
+
 }
 
 @media screen and (max-width: 376px) {
@@ -204,6 +239,14 @@ body {
         }
     } 
 }
+
+
+
+
+
+
+
+
 
 
 
