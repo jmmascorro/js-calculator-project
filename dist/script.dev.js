@@ -9,8 +9,9 @@ var addition = document.querySelector("#add");
 var subtraction = document.querySelector("#subtract");
 var multiply = document.querySelector("#multiply");
 var divide = document.querySelector("#divide");
+var outputScreen = document.querySelector(".output_screen");
 var buttonsContainer = document.querySelector(".input_buttons");
-var nums = [6, 7, 8, 9, 2, 3, 4, 5, 1, 0, '.', "π"];
+var nums = [6, 7, 8, 9, 2, 3, 4, 5, 1, 0, '.'];
 
 var generateButtons = function generateButtons() {
   nums.forEach(function (num) {
@@ -56,18 +57,20 @@ clearButton.addEventListener("click", function () {
 });
 equalButton.addEventListener("click", function () {
   if (operator == "+") {
-    output3.innerHTML = parseFloat(output1.innerHTML) + parseFloat(output2.innerHTML);
+    output2.innerHTML = output2.innerHTML.substring(1);
+    output3.innerHTML = "=" + (parseFloat(output1.innerHTML) + parseFloat(output2.innerHTML));
+    output2.innerHTML = "+" + output2.innerHTML;
   } else if (operator == "-") {
     output2.innerHTML = output2.innerHTML.substring(1);
-    output3.innerHTML = parseFloat(output1.innerHTML) - parseFloat(output2.innerHTML);
+    output3.innerHTML = "=" + (parseFloat(output1.innerHTML) - parseFloat(output2.innerHTML));
     output2.innerHTML = "-" + output2.innerHTML;
   } else if (operator == "*") {
     output2.innerHTML = output2.innerHTML.substring(1);
-    output3.innerHTML = parseFloat(output1.innerHTML) * parseFloat(output2.innerHTML);
+    output3.innerHTML = "=" + parseFloat(output1.innerHTML) * parseFloat(output2.innerHTML);
     output2.innerHTML = "*" + output2.innerHTML;
   } else if (operator == "/") {
     output2.innerHTML = output2.innerHTML.substring(1);
-    output3.innerHTML = parseFloat(output1.innerHTML) / parseFloat(output2.innerHTML);
+    output3.innerHTML = "=" + parseFloat(output1.innerHTML) / parseFloat(output2.innerHTML);
     output2.innerHTML = "÷" + output2.innerHTML;
   }
 });

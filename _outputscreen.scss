@@ -4,18 +4,22 @@ main {
         overflow-wrap: break-word;
         width: 23vw;
         height: 30vh;
-        background-color: rgb(35, 33, 33);
+        background-color: rgb(55, 53, 53);
         border-radius: 10px;
         border: 2px solid black;
 
         h1 {
             color: white;
             padding-right: 15px;
+            overflow-wrap: break-word;
+            font-size: 30px;
+            margin-top: 15px;
         }
 
         h2 {
             color: white;
             padding-right: 15px;
+            margin-bottom: 15px;
         }
     }
 }

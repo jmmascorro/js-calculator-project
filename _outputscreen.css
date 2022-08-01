@@ -3,15 +3,19 @@ main .output_screen {
   overflow-wrap: break-word;
   width: 23vw;
   height: 30vh;
-  background-color: #232121;
+  background-color: #373535;
   border-radius: 10px;
   border: 2px solid black;
 }
 main .output_screen h1 {
   color: white;
   padding-right: 15px;
+  overflow-wrap: break-word;
+  font-size: 30px;
+  margin-top: 15px;
 }
 main .output_screen h2 {
   color: white;
   padding-right: 15px;
+  margin-bottom: 15px;
 }

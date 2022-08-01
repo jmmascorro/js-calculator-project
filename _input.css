@@ -17,6 +17,11 @@
   border: none;
   background-color: black;
   color: white;
+  font-size: 20px;
+}
+.calc_grid button:hover {
+  cursor: pointer;
+  background-color: #8a8888;
 }
 
 #clear {

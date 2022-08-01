@@ -7,11 +7,12 @@ const addition = document.querySelector("#add");
 const subtraction = document.querySelector("#subtract");
 const multiply = document.querySelector("#multiply");
 const divide = document.querySelector("#divide");
+const outputScreen = document.querySelector(".output_screen");
 
 const buttonsContainer = document.querySelector(".input_buttons");
 
-const nums = [6, 7, 8, 9, 2, 3, 4, 5, 1, 0, '.', "π"];
-
+const nums = [6, 7, 8, 9, 2, 3, 4, 5, 1, 0, '.',];
+ 
 const generateButtons = () => {
     nums.forEach(num => {
         const newButton = document.createElement('button');
@@ -20,7 +21,7 @@ const generateButtons = () => {
         newButton.classList.add("number");
         newButton.addEventListener("click", () => {
             if(newButton.classList == "number") {
-                output2.innerHTML += num;
+                output2.innerHTML += num;    
             }
         })
     });
@@ -66,21 +67,23 @@ clearButton.addEventListener("click", () => {
 
 equalButton.addEventListener ("click", () => {
     if(operator == "+") {
-        output3.innerHTML = parseFloat(output1.innerHTML) + parseFloat(output2.innerHTML);
+        output2.innerHTML = output2.innerHTML.substring(1);
+        output3.innerHTML = "=" + (parseFloat(output1.innerHTML) + parseFloat(output2.innerHTML));
+        output2.innerHTML = "+" + output2.innerHTML; 
     }else if(operator == "-") {
         output2.innerHTML = output2.innerHTML.substring(1);
-        output3.innerHTML = parseFloat(output1.innerHTML) - parseFloat(output2.innerHTML);  
+        output3.innerHTML = "=" + (parseFloat(output1.innerHTML) - parseFloat(output2.innerHTML));  
         output2.innerHTML = "-" + output2.innerHTML; 
     }else if(operator == "*") {
         output2.innerHTML = output2.innerHTML.substring(1);
-        output3.innerHTML = parseFloat(output1.innerHTML) * parseFloat(output2.innerHTML);
+        output3.innerHTML = "=" + (parseFloat(output1.innerHTML) * parseFloat(output2.innerHTML));
         output2.innerHTML = "*" + output2.innerHTML; 
     }else if(operator == "/") {
         output2.innerHTML = output2.innerHTML.substring(1);
-        output3.innerHTML = parseFloat(output1.innerHTML) / parseFloat(output2.innerHTML);
+        output3.innerHTML = "=" + (parseFloat(output1.innerHTML) / parseFloat(output2.innerHTML));
         output2.innerHTML = "÷" + output2.innerHTML; 
     }
-})
+});
 
 
 

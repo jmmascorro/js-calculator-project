@@ -2,9 +2,12 @@
 @use 'outputscreen';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
+* {
+    font-family: "Roboto", "sans-serif";
+}
 
 body {
-    background-color: grey;
+    background-color: rgb(116, 116, 116);
     background-size: cover;
     height: 100%;
     overflow: hidden;
@@ -183,7 +186,25 @@ body {
         }
 }
 }
- 
+
+@media screen and (max-width: 376px) {
+    main {
+
+    .input_buttons {
+        width: 75vw;
+        height: 50vh;
+        grid-auto-rows: 60px; 
+    }
+    }
+
+    .calc_grid {
+        button {
+            width: 90%;
+            height: 90%;
+        }
+    } 
+}
+
 
 
 
